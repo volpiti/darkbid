@@ -1,0 +1,93 @@
+@import '../../utils/styles.css';
+.nav-bar-list {
+    display: flex;
+    justify-content: flex-start;
+    height: 5rem;
+    width: 100%;
+    background-color: var(--primary);
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    box-shadow: 0 0 2rem var(--dark-shadow);
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+.nav-bar-list__item {
+    margin: auto 0;
+    font-size: 1.5rem;
+}
+
+.nav-bar-list__item--menu {
+    width: 5rem;
+    padding-top: .3rem;
+    color: var(--white);
+    border: none;
+    background-color: transparent;
+}
+
+.nav-bar-list__item--menu:hover {
+    cursor: pointer;
+}
+
+.icon-size {
+    height: 50%;
+    width: 50%;
+}
+
+.nav-bar-list__item--logo {
+    width: calc(100vw - 10rem);
+}
+
+.logo-size {
+    height: 3.5rem;
+    margin-top: .5rem;
+}
+
+.login-button {
+    display: flex;
+    flex-direction: row;
+    width: 6rem;
+    height: 1.6rem;
+    margin-right: 1rem;
+    border-style: solid;
+    border-width: .15rem;
+    border-color: var(--white);
+    border-radius: 1.5rem;
+    text-decoration: none;
+}
+
+.login-button__icon {
+    height: 1rem;
+    margin: auto 0;
+    margin-left: .8rem;
+    color: var(--white);
+}
+
+.login-button__text {
+    margin: .22rem 0 0 .3rem;
+    font-size: .8rem;
+    color: var(--white);
+}
+
+.login-button:hover {
+    background-color: var(--white);
+}
+
+.login-button:hover .login-button__icon {
+    color: var(--primary);
+}
+
+.login-button:hover .login-button__text {
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 28rem) {
+    .login-button__text {
+        display: none;
+    }
+    .login-button {
+        width: 3rem;
+    }
+}

@@ -1,0 +1,21 @@
+:root {
+    --white: #fff;
+    --white-text: #fff;
+    --card-background: #788382;
+    --black: #000;
+    --black-text: #000;
+    --gray: #4b4b4b;
+    --light-gray: #929292;
+    --input-gray: #c7c7c7;
+    --warning: #db3232;
+    --primary: #40798c;
+    --secondary: #4e998c;
+    --light-green-background: #292929;
+    --green-background: #d8f1f0;
+    --dark-shadow: #000;
+    --light-shadow: rgb(119, 119, 119);
+    --positive: #00A300;
+    margin: 0;
+    font-size: 16px;
+    background-color: var(--light-green-background);
+}

@@ -1,0 +1,44 @@
+@import '../../utils/styles.css';
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    position: fixed;
+    top: 5.1rem;
+    z-index: 7;
+    width: 10rem;
+    padding: 1.2rem;
+    margin: 1rem;
+    border-radius: 0 2rem 2rem 2rem;
+    background-color: var(--primary);
+    box-shadow: .5rem .5rem 2rem 0 var(--dark-shadow);
+}
+
+.menu-list__item {
+    display: flex;
+    flex-direction: row;
+    margin: .5rem;
+    padding: .3rem;
+    width: 8rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: .2s;
+}
+
+.menu-list__item:hover {
+    margin-left: 1rem;
+    transition: .2s;
+}
+
+.menu-list__icon {
+    margin: .25rem .7rem;
+    color: var(--white);
+}
+
+.separator {
+    height: .1rem;
+    width: 10rem;
+    background-color: var(--white);
+    margin: 1rem 0;
+}

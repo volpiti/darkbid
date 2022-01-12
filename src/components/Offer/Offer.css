@@ -1,0 +1,164 @@
+@import '../../utils/styles.css';
+.offer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 7rem;
+    color: var(--white);
+}
+
+.offer__image {
+    width: calc(100vw - 3rem);
+    margin: .5rem auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem var(--dark-shadow);
+}
+
+.offer__title {
+    margin: 1rem 1.5rem 0 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.offer__winning {
+    margin: 1rem 1.5rem 0 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--positive)
+}
+
+.offer__price {
+    margin: 1rem 1.5rem 0 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.offer__deadline {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 1.5rem 0 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 1rem;
+}
+
+.offer__description {
+    margin: 1rem 1.5rem 11.5rem 1.5rem;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.bid {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 8rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 5%;
+    background-color: var(--primary);
+    border-radius: .8rem;
+}
+
+@media only screen and (min-width: 36rem) {
+    .bid {
+        width: 32rem;
+        position: fixed;
+        bottom: 2rem;
+        left: calc(50% - 16rem);
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    .offer {
+        display: grid;
+        grid-template-rows: 13rem 3rem 3rem 3rem auto;
+        grid-template-columns: 22rem 22rem;
+        grid-template-areas: "img title" "img winning" "img price" "img deadline" "description description";
+        margin: 0 auto;
+        margin-left: calc(50% - 22rem);
+        margin-top: 7rem;
+    }
+    .offer__image {
+        grid-area: img;
+        height: 22rem;
+        width: 22rem;
+        object-fit: cover;
+    }
+    .offer__title {
+        grid-area: title;
+    }
+    .offer__price {
+        grid-area: price;
+    }
+    .offer__winning {
+        grid-area: winning;
+    }
+    .offer__deadline {
+        grid-area: deadline;
+    }
+    .offer__description {
+        grid-area: description;
+        margin: 2rem 0 12rem 0;
+    }
+}
+
+.bid__custom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 5rem;
+    width: 100%;
+}
+
+.bid__text {
+    margin: auto 1rem;
+}
+
+.bid__text--min {
+    padding-left: .4rem;
+}
+
+.bid__ammount {
+    height: 2rem;
+    width: 5rem;
+    margin: auto 0;
+    padding: 0 .3rem;
+    outline-style: none;
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+    background-color: var(--white);
+    color: var(--gray);
+    text-align: center;
+}
+
+.min-bid {
+    vertical-align: middle;
+}
+
+.bid__submit-button {
+    height: 2rem;
+    width: 3rem;
+    margin: auto 0;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.bid__minimal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 5rem;
+    width: 100%;
+}
+
+.bid__submit-button:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,157 @@
+@import '../../utils/styles.css';
+.form-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-image-button {
+    display: none;
+}
+
+.form-page__image {
+    display: flex;
+    width: 90%;
+    max-width: 25.5rem;
+    height: 6rem;
+    margin: auto;
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+    background-color: var(--input-gray);
+    box-shadow: 0 .1rem .3rem var(--dark-shadow);
+    cursor: pointer;
+}
+
+.upload-image-icon {
+    height: 3rem;
+    width: 3rem;
+    margin: auto;
+    color: var(--gray);
+}
+
+.form-page__text-field {
+    display: flex;
+    width: 90%;
+    max-width: 24rem;
+    height: 2rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    outline-style: none;
+    border-style: none;
+    border-radius: .3rem;
+    background-color: var(--input-gray);
+    box-shadow: 0 .1rem .3rem var(--dark-shadow);
+}
+
+.form-page__text-field--obligatory {
+    border-style: solid;
+    border-color: var(--secondary);
+    border-width: .1rem;
+}
+
+.description-input {
+    height: 4rem;
+    padding-top: .8rem;
+}
+
+.form-page__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button {
+    width: 7rem;
+    height: 2.3rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem var(--dark-shadow);
+    color: var(--black-text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.button--discard {
+    height: 1.95rem;
+    margin-right: 1.3rem;
+    padding-top: .35rem;
+    text-decoration: none;
+    background-color: var(--light-gray);
+}
+
+.button--submit {
+    background-color: var(--secondary);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-page__message {
+    width: 14rem;
+    margin: 2rem auto;
+    color: var(--light-gray);
+}
+
+@media only screen and (min-width: 36rem) {
+    .form-page {
+        display: grid;
+        grid-gap: 0 1rem;
+        grid-template-columns: 16rem 8rem 8rem;
+        grid-template-rows: 3rem 3rem 3rem 3rem 3rem 6rem 5rem;
+        grid-template-areas: "img title title" "img price price" "img minbid curr" "img deadline deadline" "url url url" "description description description" "sth buttons buttons" "mess mess mess";
+        margin-left: calc(50% - 17rem);
+        margin-top: 7rem;
+    }
+    .form-page__text-field {
+        max-width: none;
+    }
+    .form-page__image {
+        grid-area: img;
+        margin-top: 0;
+        width: 100%;
+        height: 92%;
+    }
+    .title-input {
+        grid-area: title;
+        width: 15.7rem;
+    }
+    .price-input {
+        grid-area: price;
+        width: 15.7rem;
+    }
+    .minbid-input {
+        grid-area: minbid;
+        width: 7rem;
+    }
+    .currency-input {
+        grid-area: curr;
+        width: 6.9rem;
+    }
+    .deadline-input {
+        grid-area: deadline;
+        width: 16rem;
+    }
+    .image-url-input {
+        grid-area: url;
+        width: 32.9rem;
+    }
+    .description-input {
+        grid-area: description;
+        width: 32.9rem;
+        height: 100%;
+    }
+    .form-page__buttons {
+        grid-area: buttons;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
+    }
+    .form-page__message {
+        grid-area: mess;
+        width: 30rem;
+    }
+}
+
+.form-page__text-field::placeholder {
+    color: var(--black-text);
+}

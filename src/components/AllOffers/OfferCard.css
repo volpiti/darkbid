@@ -1,0 +1,89 @@
+@import '../../utils/styles.css';
+.card {
+    display: grid;
+    width: 90%;
+    max-width: 48rem;
+    margin: 0 auto;
+    grid-template-rows: 4.5rem 2rem 2.5rem;
+    grid-template-columns: 9rem auto;
+    grid-template-areas: "img title" "img price" "img deadline";
+    background-color: var(--card-background);
+    box-shadow: 0 0 .5rem var(--dark-shadow);
+    border-radius: 1rem;
+    text-align: left;
+    transition: .3s;
+}
+
+.image-area {
+    grid-area: img;
+}
+
+.image-area__image {
+    height: 9rem;
+    width: 9rem;
+    object-fit: cover;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.text-format {
+    margin: auto 1rem;
+    text-decoration: none;
+    color: var(--black);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.title {
+    grid-area: title;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.price {
+    grid-area: price;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.deadline {
+    grid-area: deadline;
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.card__icon {
+    color: var(--black);
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.card:hover {
+    width: 96%;
+    background-color: var(--green-background);
+    box-shadow: 0 0 .7rem var(--dark-shadow);
+    transition: .3s;
+}
+
+@media only screen and (min-width: 40rem) {
+    .card {
+        display: grid;
+        margin: 1rem 1rem;
+        width: 15rem;
+        grid-template-rows: 15rem 4rem 2rem 2rem;
+        grid-template-columns: 15rem;
+        grid-template-areas: "img" "title" "price" "deadline";
+    }
+    .image-area__image {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .card:hover {
+        background-color: var(--green-background);
+        width: 15rem;
+        transition: .3s;
+    }
+}
