@@ -2,6 +2,9 @@
   "name": "darkbid-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@apollo/client": "^3.3.21",
     "@auth0/auth0-react": "^1.6.0",
