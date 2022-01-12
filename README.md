@@ -10,9 +10,9 @@ Then just run
 This project was made as a school project by 2 students knowing nothing about web dev before
 
 ## Infrastructure
--DB deployed on [Heroku](https://heroku.io)
--GraphQL API server deployed on [Hasura](https://hasura.com)
--App deployed on [Heroku](https://heroku.io)
+- DB deployed on [Heroku](https://heroku.io)
+- GraphQL API server deployed on [Hasura](https://hasura.com)
+- App deployed on [Heroku](https://heroku.io)
 
 ## Used tech stack
 - react
