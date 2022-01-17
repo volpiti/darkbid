@@ -6,7 +6,7 @@ require('dotenv').config()
 
 const wsLink = new WebSocketLink({
   //uri: 'ws://localhost:8080/v1/graphql',
-  uri: 'wss://mighty-snapper-79.hasura.app/v1/graphql',
+  uri: 'wss://darkbid.hasura.app/v1/graphql',
   options: {
     reconnect: true,
     timeout: 30000,
